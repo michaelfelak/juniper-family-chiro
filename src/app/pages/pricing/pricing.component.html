@@ -1,0 +1,171 @@
+<section class="page-section">
+  <h1>Services</h1>
+
+  <div class="service-grid">
+
+    <div class="flip-wrapper service-flip"
+         [class.flipped]="isFlipped('initial-exam')"
+         (click)="toggle('initial-exam')"
+         (keyup.enter)="toggle('initial-exam')"
+         (keyup.space)="toggle('initial-exam')"
+         role="button" tabindex="0" aria-label="Initial Examination details">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h2>Initial Examination</h2>
+          <span class="amount">$150</span>
+          <span class="duration">40 min</span>
+          <span class="tap-hint">Tap for details</span>
+        </div>
+        <div class="flip-back">
+          <p>Required before your first adjustment or if it has been more than a year since your last visit. An adjustment is included in this visit.</p>
+          <span class="tap-hint">Tap to close</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-wrapper service-flip"
+         [class.flipped]="isFlipped('adjustment')"
+         (click)="toggle('adjustment')"
+         (keyup.enter)="toggle('adjustment')"
+         (keyup.space)="toggle('adjustment')"
+         role="button" tabindex="0" aria-label="Adjustment details">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h2>Adjustment</h2>
+          <span class="amount">$60</span>
+          <span class="duration">15 min</span>
+          <span class="tap-hint">Tap for details</span>
+        </div>
+        <div class="flip-back">
+          <p>A focused chiropractic adjustment to restore proper movement and nervous system function.</p>
+          <span class="tap-hint">Tap to close</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-wrapper service-flip"
+         [class.flipped]="isFlipped('reassessment')"
+         (click)="toggle('reassessment')"
+         (keyup.enter)="toggle('reassessment')"
+         (keyup.space)="toggle('reassessment')"
+         role="button" tabindex="0" aria-label="Reassessment details">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h2>Reassessment</h2>
+          <span class="amount">$80</span>
+          <span class="duration">20 min</span>
+          <span class="tap-hint">Tap for details</span>
+        </div>
+        <div class="flip-back">
+          <p>Required if you have not been seen in over 6 months or have recently completed your initial care plan. An adjustment is included in this visit.</p>
+          <span class="tap-hint">Tap to close</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <h1>Packages &amp; Policies</h1>
+
+  <p class="policy-note">
+    We do not bill any insurance in our office. Because of this, we have the following payment options:
+  </p>
+
+  <div class="packages-grid">
+
+    <div class="flip-wrapper package-flip"
+         [class.flipped]="isFlipped('wellness-family')"
+         (click)="toggle('wellness-family')"
+         (keyup.enter)="toggle('wellness-family')"
+         (keyup.space)="toggle('wellness-family')"
+         role="button" tabindex="0" aria-label="Wellness Family Visit details">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h2>Wellness Family Visit</h2>
+          <span class="amount">$135<span class="per">/visit</span></span>
+          <span class="tap-hint">Tap for details</span>
+        </div>
+        <div class="flip-back">
+          <p>Available to family members who have completed an initial exam. This includes two parents and all children under 18 years of age.</p>
+          <span class="tap-hint">Tap to close</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-wrapper package-flip"
+         [class.flipped]="isFlipped('acute-care')"
+         (click)="toggle('acute-care')"
+         (keyup.enter)="toggle('acute-care')"
+         (keyup.space)="toggle('acute-care')"
+         role="button" tabindex="0" aria-label="Acute Care details">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h2>Acute Care — 1 Person</h2>
+          <span class="amount">$250<span class="per">/mo</span></span>
+          <span class="tap-hint">Tap for details</span>
+        </div>
+        <div class="flip-back">
+          <p>Ideal for managing symptoms effectively. Great for pregnant women, infants with feeding or sleeping issues, children with retained primitive reflexes, or adults with back pain.</p>
+          <p>Typically 2–3 visits/week based on Doctor's recommendations.</p>
+          <span class="tap-hint">Tap to close</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-wrapper package-flip"
+         [class.flipped]="isFlipped('12-visit')"
+         (click)="toggle('12-visit')"
+         (keyup.enter)="toggle('12-visit')"
+         (keyup.space)="toggle('12-visit')"
+         role="button" tabindex="0" aria-label="12-Visit Package details">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h2>12-Visit Package</h2>
+          <span class="amount">$560</span>
+          <span class="tap-hint">Tap for details</span>
+        </div>
+        <div class="flip-back">
+          <p>Visits do not expire and can be shared among family members.</p>
+          <span class="tap-hint">Tap to close</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-wrapper wellness-flip"
+         [class.flipped]="isFlipped('wellness-plans')"
+         (click)="toggle('wellness-plans')"
+         (keyup.enter)="toggle('wellness-plans')"
+         (keyup.space)="toggle('wellness-plans')"
+         role="button" tabindex="0" aria-label="Wellness Care Plans details">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h2>Wellness Care Plans</h2>
+          <div class="wellness-rates-preview">
+            <span>1 Person <strong>$175<span class="per">/mo</span></strong></span>
+            <span>Family <strong>$275<span class="per">/mo</span></strong></span>
+          </div>
+          <span class="tap-hint">Tap for details</span>
+        </div>
+        <div class="flip-back">
+          <p>Designed for those who want the full benefits of chiropractic care through optimal nervous system function. These patients aren't managing symptoms — they stay proactive with weekly visits based on Doctor's recommendations.</p>
+          <span class="tap-hint">Tap to close</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="policy-footer">
+    <p>
+      <strong>Self-Submission:</strong> We can provide a detailed receipt to self-submit for direct reimbursement. Please contact your insurance carrier for submission and benefit details for an out-of-network provider.
+    </p>
+    <p>
+      We do our best to offer quality care to your family at reasonable prices. We do not want financial hardship to be why you forgo chiropractic care. We have set up a nonprofit to assist those who qualify. Please contact the office for more information.
+    </p>
+    <p class="cc-note">
+      &#42; A 3% processing fee will be added to any package purchased by credit card.
+    </p>
+  </div>
+</section>

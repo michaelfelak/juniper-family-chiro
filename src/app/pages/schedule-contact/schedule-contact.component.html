@@ -1,0 +1,38 @@
+<section class="page-section">
+  <h1>Schedule / Contact</h1>
+  <p class="intro">Send a request and we will reach out with next steps.</p>
+
+  <form [formGroup]="contactForm" (ngSubmit)="submitContact()" novalidate>
+    <label>
+      Name
+      <input type="text" formControlName="name" placeholder="Your full name" />
+    </label>
+
+    <label>
+      Email
+      <input type="email" formControlName="email" placeholder="you@email.com" />
+    </label>
+
+    <label>
+      Phone
+      <input type="tel" formControlName="phone" placeholder="(555) 555-5555" />
+    </label>
+
+    <label>
+      Message
+      <textarea formControlName="message" rows="4" placeholder="How can we support you?"></textarea>
+    </label>
+
+    @if (contactForm.invalid && (contactForm.dirty || contactForm.touched)) {
+      <p class="validation">Please complete all fields with valid details before submitting.</p>
+    }
+
+    <button type="submit" [disabled]="isSubmitting()">
+      {{ isSubmitting() ? 'Sending...' : 'Send Request' }}
+    </button>
+
+    @if (submitResult()) {
+      <p class="result">{{ submitResult() }}</p>
+    }
+  </form>
+</section>

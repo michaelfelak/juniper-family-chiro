@@ -1,0 +1,136 @@
+<div class="page-shell">
+  <nav class="top-nav" aria-label="Main navigation">
+    <a href="#welcome">Welcome</a>
+    <a href="#practice">Our Practice</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#pregnancy">Pregnancy</a>
+    <a href="#kids">Chiro Care 4 Kids</a>
+    <a href="#new-patients">New Patients</a>
+    <a href="#contact">Schedule/Contact</a>
+  </nav>
+
+  <section id="welcome" class="hero-split">
+    <div class="hero-photo" role="img" aria-label="Mother and baby"></div>
+
+    <div class="hero-brand">
+      <div class="brand-lockup" aria-label="Juniper Family Chiropractic">
+        <div class="mark" aria-hidden="true">
+          <span class="mark-line"></span>
+          <span class="mark-heart"></span>
+        </div>
+
+        <div class="wordmark">
+          <p class="logo-juniper">JUNIPER</p>
+          <p class="logo-sub">FAMILY CHIROPRACTIC</p>
+        </div>
+      </div>
+
+      <a href="#contact" class="book-now">Book Now</a>
+    </div>
+  </section>
+
+  <section id="practice" class="mission-block">
+    <h1>Our Mission</h1>
+    <p>
+      To elevate the health of our children by honoring, empowering, and equipping
+      mothers during pregnancy and throughout motherhood.
+    </p>
+    <p>
+      We honor your body&rsquo;s innate capability to grow and bring life into the world.
+    </p>
+    <p>
+      We empower you to trust your ability to bring forth life and to nurture and protect
+      your children.
+    </p>
+    <p>
+      We equip you with the knowledge needed to make healthy choices regarding the
+      lifestyle of your family.
+    </p>
+  </section>
+
+  <section id="pregnancy" class="panel">
+    <h2>Prenatal Care Focus</h2>
+    @if (isContentLoading) {
+      <p class="loading">Loading services...</p>
+    } @else {
+      <div class="service-grid">
+        @for (service of services; track service.title) {
+          <article class="service-card">
+            <p class="audience">{{ service.audience }}</p>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </article>
+        }
+      </div>
+    }
+  </section>
+
+  <section id="kids" class="panel">
+    <h2>Family Stories</h2>
+    @if (isContentLoading) {
+      <p class="loading">Loading testimonials...</p>
+    } @else {
+      <div class="testimonial-grid">
+        @for (testimonial of testimonials; track testimonial.name) {
+          <blockquote>
+            <p>&ldquo;{{ testimonial.quote }}&rdquo;</p>
+            <footer>{{ testimonial.name }} | {{ testimonial.stage }}</footer>
+          </blockquote>
+        }
+      </div>
+    }
+  </section>
+
+  <section id="new-patients" class="panel">
+    <h2>New Patient Questions</h2>
+    @if (isContentLoading) {
+      <p class="loading">Loading FAQs...</p>
+    } @else {
+      <div class="faq-list">
+        @for (faq of faqs; track faq.question) {
+          <details>
+            <summary>{{ faq.question }}</summary>
+            <p>{{ faq.answer }}</p>
+          </details>
+        }
+      </div>
+    }
+  </section>
+
+  <section id="contact" class="panel panel-contact">
+    <h2>Schedule / Contact</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="submitContact()" novalidate>
+      <label>
+        Name
+        <input type="text" formControlName="name" placeholder="Your full name" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" formControlName="email" placeholder="you@email.com" />
+      </label>
+
+      <label>
+        Phone
+        <input type="tel" formControlName="phone" placeholder="(555) 555-5555" />
+      </label>
+
+      <label>
+        Message
+        <textarea formControlName="message" rows="4" placeholder="How can we support you?"></textarea>
+      </label>
+
+      @if (contactForm.invalid && (contactForm.dirty || contactForm.touched)) {
+        <p class="validation">Please complete all fields with valid details before submitting.</p>
+      }
+
+      <button type="submit" [disabled]="isSubmitting">
+        {{ isSubmitting ? 'Sending...' : 'Send Request' }}
+      </button>
+
+      @if (submitResult) {
+        <p class="result">{{ submitResult }}</p>
+      }
+    </form>
+  </section>
+</div>

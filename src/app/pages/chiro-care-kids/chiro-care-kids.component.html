@@ -1,0 +1,19 @@
+<section class="page-section">
+  <h1>Chiro Care 4 Kids</h1>
+  <p class="intro">
+    Age-appropriate, gentle pediatric care from newborns through school years.
+  </p>
+
+  @if (isLoading()) {
+    <p class="loading">Loading family stories...</p>
+  } @else {
+    <div class="testimonial-grid">
+      @for (testimonial of testimonials(); track testimonial.name) {
+        <blockquote>
+          <p>&ldquo;{{ testimonial.quote }}&rdquo;</p>
+          <footer>{{ testimonial.name }} | {{ testimonial.stage }}</footer>
+        </blockquote>
+      }
+    </div>
+  }
+</section>

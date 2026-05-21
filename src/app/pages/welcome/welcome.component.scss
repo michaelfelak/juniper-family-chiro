@@ -1,0 +1,138 @@
+.hero-split {
+  background: #ece9eb;
+  min-height: min(70vh, 640px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-photo {
+  background:
+    linear-gradient(180deg, rgba(255, 239, 231, 0.84), rgba(252, 228, 219, 0.76)),
+    radial-gradient(circle at 25% 20%, #f4ddcd 0, transparent 40%),
+    radial-gradient(circle at 20% 82%, #dbb8ac 0, transparent 35%),
+    linear-gradient(120deg, #dbccc3, #edd6cd 52%, #e4cdbe);
+}
+
+.hero-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(1.2rem, 3vw, 2.4rem);
+}
+
+.brand-lockup {
+  width: min(92%, 760px);
+  display: grid;
+  grid-template-columns: minmax(130px, 195px) 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mark {
+  width: 100%;
+  aspect-ratio: 0.62;
+  border: 5px solid #2b829c;
+  border-radius: 55% 50% 50% 55% / 44% 44% 56% 56%;
+  position: relative;
+  opacity: 0.92;
+}
+
+.mark-line {
+  position: absolute;
+  inset: 14% 42% 8% auto;
+  width: 5px;
+  background: #f49e8f;
+  border-radius: 99px;
+  transform: rotate(7deg);
+}
+
+.mark-heart {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #f3a091;
+  left: 18%;
+  bottom: 15%;
+  transform: rotate(-45deg);
+}
+
+.mark-heart::before,
+.mark-heart::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f3a091;
+}
+
+.mark-heart::before {
+  left: 0;
+  top: -12px;
+}
+
+.mark-heart::after {
+  left: 12px;
+  top: 0;
+}
+
+.wordmark p {
+  margin: 0;
+}
+
+.logo-juniper {
+  color: #2f88a4;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.08em;
+  font-size: clamp(2.2rem, 7vw, 7.5rem);
+  line-height: 0.88;
+}
+
+.logo-sub {
+  color: #9498a0;
+  font-family: 'Arial Narrow', 'Segoe UI', sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  font-size: clamp(0.94rem, 2.1vw, 3rem);
+}
+
+.book-now {
+  margin-top: 2rem;
+  background: #f2674e;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Arial Narrow', 'Segoe UI', sans-serif;
+  letter-spacing: 0.09em;
+  font-size: 1.1rem;
+  padding: 1.1rem 2.3rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .hero-photo {
+    min-height: 320px;
+  }
+
+  .brand-lockup {
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-lockup {
+    width: 100%;
+    grid-template-columns: 100px 1fr;
+  }
+
+  .book-now {
+    margin-top: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
+}

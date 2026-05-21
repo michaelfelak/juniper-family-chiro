@@ -1,0 +1,82 @@
+.page-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1,
+.intro,
+.validation,
+.result {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #344863;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+}
+
+.intro {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-family: 'Arial Narrow', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #385f7d;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  border: 1px solid #ccd5dd;
+  background: #fff;
+  padding: 0.65rem 0.75rem;
+}
+
+button {
+  justify-self: start;
+  border: 0;
+  background: #f2674e;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Arial Narrow', 'Segoe UI', sans-serif;
+  letter-spacing: 0.06em;
+  padding: 0.7rem 1.25rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.validation,
+.result {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.validation {
+  color: #9a3f35;
+}
+
+.result {
+  color: #2d7b47;
+}

@@ -1,0 +1,225 @@
+.page-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1,
+h2,
+p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #344863;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.9rem;
+}
+
+p {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.6;
+}
+
+.amount {
+  display: block;
+  color: #2f88a4;
+  font-size: 2.8rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+
+  .per {
+    font-size: 1.3rem;
+  }
+}
+
+// ── Flip card shared ──────────────────────────────────────────────────────────
+
+.flip-wrapper {
+  cursor: pointer;
+  outline: none;
+  position: relative;
+
+  &:focus-visible .flip-inner {
+    box-shadow: 0 0 0 3px #2f88a4;
+  }
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #d4dbe2;
+  background: #fff;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.35s ease;
+}
+
+.flip-front {
+  opacity: 1;
+  pointer-events: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.flip-back {
+  opacity: 0;
+  pointer-events: none;
+  background: #f5f9fb;
+  justify-content: flex-start;
+  padding-top: 1.4rem;
+}
+
+.flipped {
+  .flip-front {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .flip-back {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.tap-hint {
+  display: block;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.9rem;
+  color: #8fa3b5;
+  letter-spacing: 0.03em;
+  text-align: right;
+}
+
+.duration {
+  font-size: 1.05rem;
+  color: #8fa3b5;
+  margin-top: 0.2rem;
+}
+
+// ── Service grid ──────────────────────────────────────────────────────────────
+
+.service-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 2rem;
+}
+
+.service-flip {
+  height: 230px;
+}
+
+// ── Divider ───────────────────────────────────────────────────────────────────
+
+.divider {
+  border: none;
+  border-top: 1px solid #d4dbe2;
+  margin: 0.5rem 0 2rem;
+}
+
+// ── Packages grid ─────────────────────────────────────────────────────────────
+
+.policy-note {
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+}
+
+.packages-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.package-flip {
+  height: 270px;
+}
+
+.wellness-flip {
+  grid-column: 1 / -1;
+  height: 200px;
+}
+
+.wellness-rates-preview {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  span {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    color: #5a6a7e;
+    text-align: center;
+
+    strong {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: #2f88a4;
+      font-size: 2rem;
+      font-weight: 600;
+
+      .per {
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// ── Footer notes ──────────────────────────────────────────────────────────────
+
+.policy-footer {
+  margin-top: 2rem;
+  border-top: 1px solid #d4dbe2;
+  padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+.cc-note {
+  font-size: 1rem !important;
+  color: #5a6a7e;
+  font-style: italic;
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 900px) {
+  .service-grid,
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wellness-flip {
+    grid-column: auto;
+  }
+}
+
+
