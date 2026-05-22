@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AboutUs } from './pages/about-us/about-us';
 import { ChiroCareKidsComponent } from './pages/chiro-care-kids/chiro-care-kids.component';
 import { NewPatientsComponent } from './pages/new-patients/new-patients.component';
 import { OurPracticeComponent } from './pages/our-practice/our-practice.component';
@@ -16,5 +17,6 @@ export const routes: Routes = [
 	{ path: 'chiro-care-kids', component: ChiroCareKidsComponent },
 	{ path: 'new-patients', component: NewPatientsComponent },
 	{ path: 'schedule-contact', component: ScheduleContactComponent },
+	{ path: 'about-us', component: AboutUs },
 	{ path: '**', redirectTo: 'welcome' },
 ];

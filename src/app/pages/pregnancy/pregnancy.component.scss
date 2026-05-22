@@ -8,17 +8,17 @@ h1,
 h2,
 .intro,
 p {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   color: #344863;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-size: clamp(1.6rem, 4vw, 3.6rem);
 }
 
 .intro {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   margin-top: 0.5rem;
 }
 
@@ -37,26 +37,27 @@ article {
 
 .audience {
   margin: 0;
-  font-family: 'Arial Narrow', 'Segoe UI', sans-serif;
+  font-family: 'Lora', Georgia, serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #7397aa;
+  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
 }
 
 h2 {
   margin: 0.45rem 0;
-  font-size: 1.9rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.9rem);
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
 }
 
 .loading {
   margin-top: 1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .service-grid {
     grid-template-columns: 1fr;
   }

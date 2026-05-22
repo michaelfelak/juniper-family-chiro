@@ -7,7 +7,7 @@
   } @else {
     <div class="faq-list">
       @for (faq of faqs(); track faq.question) {
-        <details>
+        <details open>
           <summary>{{ faq.question }}</summary>
           <p>{{ faq.answer }}</p>
         </details>
