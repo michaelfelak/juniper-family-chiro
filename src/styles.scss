@@ -1,3 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lora:wght@400;600&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}

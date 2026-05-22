@@ -8,17 +8,17 @@ h1,
 .intro,
 p,
 footer {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   color: #344863;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-size: clamp(1.6rem, 4vw, 3.6rem);
 }
 
 .intro {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   margin-top: 0.5rem;
 }
 
@@ -37,12 +37,12 @@ blockquote {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
 }
 
 footer {
   margin-top: 0.5rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 1.8vw, 1.1rem);
   color: #64819e;
 }
 
@@ -50,7 +50,7 @@ footer {
   margin-top: 1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .testimonial-grid {
     grid-template-columns: 1fr;
   }
