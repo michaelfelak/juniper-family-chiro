@@ -1,38 +1,52 @@
+.hero-section {
+  background: var(--juniper-ivory);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero-split {
-  background: #ece9eb;
-  min-height: min(70vh, 640px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch;
 }
 
 .hero-photo {
-  background:
-    linear-gradient(180deg, rgba(255, 239, 231, 0.84), rgba(252, 228, 219, 0.76)),
-    radial-gradient(circle at 25% 20%, #f4ddcd 0, transparent 40%),
-    radial-gradient(circle at 20% 82%, #dbb8ac 0, transparent 35%),
-    linear-gradient(120deg, #dbccc3, #edd6cd 52%, #e4cdbe);
+  display: block;
+  flex: 0 0 33%;
+  width: 33%;
+  height: auto;
+  object-fit: contain;
+  object-position: top left;
 }
 
 .hero-brand {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: clamp(1.2rem, 3vw, 2.4rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
 }
 
 .brand-lockup {
   width: min(92%, 760px);
-  display: grid;
-  grid-template-columns: minmax(130px, 195px) 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+}
+
+.brand-logo {
+  display: block;
+  width: min(100%, 620px);
+  height: auto;
 }
 
 .mark {
   width: 100%;
   aspect-ratio: 0.62;
-  border: 5px solid #2b829c;
+  border: 5px solid var(--juniper-teal);
   border-radius: 55% 50% 50% 55% / 44% 44% 56% 56%;
   position: relative;
   opacity: 0.92;
@@ -42,7 +56,7 @@
   position: absolute;
   inset: 14% 42% 8% auto;
   width: 5px;
-  background: #f49e8f;
+  background: var(--juniper-coral);
   border-radius: 99px;
   transform: rotate(7deg);
 }
@@ -51,7 +65,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  background: #f3a091;
+  background: var(--juniper-coral);
   left: 18%;
   bottom: 15%;
   transform: rotate(-45deg);
@@ -64,7 +78,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #f3a091;
+  background: var(--juniper-coral);
 }
 
 .mark-heart::before {
@@ -82,7 +96,7 @@
 }
 
 .logo-juniper {
-  color: #2f88a4;
+  color: var(--juniper-teal);
   font-family: 'Lora', Georgia, serif;
   letter-spacing: 0.08em;
   font-size: clamp(2.2rem, 7vw, 7.5rem);
@@ -90,7 +104,8 @@
 }
 
 .logo-sub {
-  color: #9498a0;
+  color: var(--juniper-charcoal);
+  opacity: 0.65;
   font-family: 'Lora', Georgia, serif;
   letter-spacing: 0.08em;
   font-weight: 400;
@@ -98,41 +113,95 @@
 }
 
 .book-now {
-  margin-top: 2rem;
-  background: #f2674e;
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  background: var(--juniper-teal);
+  color: var(--juniper-white);
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Lora', Georgia, serif;
   letter-spacing: 0.09em;
   font-size: 1.1rem;
   padding: 1.1rem 2.3rem;
-}
+  border-radius: 999px;
+  transition: background 0.2s ease;
 
-@media (max-width: 1024px) {
-  .hero-split {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .hero-photo {
-    min-height: 320px;
-  }
-
-  .brand-lockup {
-    grid-template-columns: 120px 1fr;
+  &:hover {
+    background: var(--juniper-deep-teal);
   }
 }
 
 @media (max-width: 760px) {
+  .hero-split {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .hero-photo {
+    width: 100%;
+    flex: none;
+  }
+
   .brand-lockup {
     width: 100%;
-    grid-template-columns: 100px 1fr;
   }
 
   .book-now {
-    margin-top: 1.2rem;
-    width: 100%;
+    margin-top: 0.6rem;
     text-align: center;
+  }
+}
+
+.mission-block {
+  max-width: 860px;
+  width: 100%;
+  margin-top: clamp(1.5rem, 3vh, 2.5rem);
+  padding: clamp(1.2rem, 3vw, 2.2rem) clamp(1rem, 3vw, 2rem) clamp(1.5rem, 3vh, 2.5rem);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  color: var(--juniper-deep-teal);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+p {
+  margin: 0.75rem auto 0;
+  max-width: 820px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.65;
+  color: var(--juniper-charcoal);
+}
+
+.mission-divider {
+  border: none;
+  border-top: 1px solid var(--juniper-line);
+  width: 40%;
+  margin: 0.9rem auto 0;
+}
+
+@media (max-width: 760px) {
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0 0.25rem;
+  }
+
+  .mission-divider {
+    width: 65%;
+  }
+
+  .mission-block {
+    padding: 1.5rem 1.25rem 2rem;
   }
 }

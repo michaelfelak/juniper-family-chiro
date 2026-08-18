@@ -19,17 +19,13 @@
   <nav class="side-nav" [class.drawer-open]="menuOpen()" aria-label="Main navigation">
     <p class="brand-name">Juniper Family Chiropractic</p>
     <a routerLink="/welcome"         routerLinkActive="active-link" (click)="closeMenu()">Welcome</a>
-    <a routerLink="/our-practice"    routerLinkActive="active-link" (click)="closeMenu()">Core Values</a>
-    <a routerLink="/pricing"         routerLinkActive="active-link" (click)="closeMenu()">Pricing</a>
-    <a routerLink="/pregnancy"       routerLinkActive="active-link" (click)="closeMenu()">Pregnancy</a>
-    <a routerLink="/chiro-care-kids" routerLinkActive="active-link" (click)="closeMenu()">Chiro Care 4 Kids</a>
-    <a routerLink="/new-patients"    routerLinkActive="active-link" (click)="closeMenu()">New Patients</a>
-    <a routerLink="/schedule-contact" routerLinkActive="active-link" (click)="closeMenu()">Schedule/Contact</a>
-    <a routerLink="/about-us"         routerLinkActive="active-link" (click)="closeMenu()">About Us</a>
-    <a href="https://juniperfamilychiro.janeapp.com/" target="_blank" rel="noopener" class="book-now-nav" (click)="closeMenu()">Book Now</a>
+    <a routerLink="/pregnancy-page"  routerLinkActive="active-link" (click)="closeMenu()">Pregnancy Care</a>
+    <a routerLink="/pediatrics"      routerLinkActive="active-link" (click)="closeMenu()">Pediatrics</a>
+    <a routerLink="/about-us"        routerLinkActive="active-link" (click)="closeMenu()">About Us</a>
   </nav>
 
   <main class="page-content">
     <router-outlet />
+    <app-footer />
   </main>
 </div>

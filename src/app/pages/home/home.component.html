@@ -13,14 +13,9 @@
     <div class="hero-photo" role="img" aria-label="Mother and baby"></div>
 
     <div class="hero-brand">
-      <div class="brand-lockup" aria-label="Juniper Family Chiropractic">
-        <div class="mark" aria-hidden="true">
-          <span class="mark-line"></span>
-          <span class="mark-heart"></span>
-        </div>
-
+      <div>
         <div class="wordmark">
-          <p class="logo-juniper">JUNIPER</p>
+          <p class="logo-juniper">JUNIP2ER</p>
           <p class="logo-sub">FAMILY CHIROPRACTIC</p>
         </div>
       </div>
@@ -32,22 +27,20 @@
   <section id="practice" class="mission-block">
     <h1>Core Values</h1>
     <p>
-      To elevate the health of our children by honoring, empowering, and equipping
-      mothers during pregnancy and throughout motherhood.
+      To elevate the health of our children by honoring, empowering, and equipping mothers during
+      pregnancy and throughout motherhood.
+    </p>
+    <hr class="mission-divider" />
+    <p>We honor your body&rsquo;s innate capability to grow and bring life into the world.</p>
+    <hr class="mission-divider" />
+    <p>
+      We empower you to trust your ability to bring forth life and to nurture and protect your
+      children.
     </p>
     <hr class="mission-divider" />
     <p>
-      We honor your body&rsquo;s innate capability to grow and bring life into the world.
-    </p>
-    <hr class="mission-divider" />
-    <p>
-      We empower you to trust your ability to bring forth life and to nurture and protect
-      your children.
-    </p>
-    <hr class="mission-divider" />
-    <p>
-      We equip you with the knowledge needed to make healthy choices regarding the
-      lifestyle of your family.
+      We equip you with the knowledge needed to make healthy choices regarding the lifestyle of your
+      family.
     </p>
   </section>
 
@@ -120,7 +113,11 @@
 
       <label>
         Message
-        <textarea formControlName="message" rows="4" placeholder="How can we support you?"></textarea>
+        <textarea
+          formControlName="message"
+          rows="4"
+          placeholder="How can we support you?"
+        ></textarea>
       </label>
 
       @if (contactForm.invalid && (contactForm.dirty || contactForm.touched)) {

@@ -1,0 +1,134 @@
+.site-footer {
+  background: var(--juniper-deep-teal);
+  color: var(--juniper-white);
+  font-family: 'Lora', Georgia, serif;
+}
+
+// ── Main row ──────────────────────────────────────────────────────────────────
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 1.25rem;
+}
+
+// ── Brand column ──────────────────────────────────────────────────────────────
+
+.footer-name {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--juniper-white);
+}
+
+.footer-tagline {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+// ── Section labels ────────────────────────────────────────────────────────────
+
+.footer-section-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--juniper-coral);
+}
+
+// ── Locations ─────────────────────────────────────────────────────────────────
+
+.footer-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+address {
+  font-style: normal;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0.6rem;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.location-name {
+  font-weight: 600;
+  color: var(--juniper-white);
+}
+
+.footer-map-link {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover { color: var(--juniper-coral); }
+}
+
+// ── Contact ───────────────────────────────────────────────────────────────────
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-email,
+.footer-phone {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover { color: var(--juniper-coral); }
+}
+
+// ── Bottom bar ────────────────────────────────────────────────────────────────
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  p {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.38);
+    font-family: 'Lora', Georgia, serif;
+  }
+}
+
+.toasty {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 760px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem 1rem;
+  }
+
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 480px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 1.25rem 1.25rem 1rem;
+  }
+
+  .footer-brand { grid-column: auto; }
+}
