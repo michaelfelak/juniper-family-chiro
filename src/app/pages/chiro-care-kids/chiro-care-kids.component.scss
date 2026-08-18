@@ -9,17 +9,19 @@ h1,
 p,
 footer {
   font-family: 'Lora', Georgia, serif;
-  color: #344863;
+  color: var(--juniper-charcoal);
 }
 
 h1 {
   margin: 0;
   font-size: clamp(1.6rem, 4vw, 3.6rem);
+  color: var(--juniper-deep-teal);
 }
 
 .intro {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   margin-top: 0.5rem;
+  color: var(--juniper-charcoal);
 }
 
 .testimonial-grid {
@@ -31,9 +33,11 @@ h1 {
 
 blockquote {
   margin: 0;
-  border: 1px solid #d4dbe2;
-  background: #fff;
+  border: 1px solid var(--juniper-line);
+  background: var(--juniper-white);
   padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(52, 53, 54, 0.06);
 }
 
 p {
@@ -43,7 +47,7 @@ p {
 footer {
   margin-top: 0.5rem;
   font-size: clamp(0.8rem, 1.8vw, 1.1rem);
-  color: #64819e;
+  color: var(--juniper-teal);
 }
 
 .loading {

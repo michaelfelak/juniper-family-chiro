@@ -8,7 +8,7 @@ h1,
 h2,
 p {
   font-family: 'Lora', Georgia, serif;
-  color: #344863;
+  color: var(--juniper-charcoal);
 }
 
 h1 {
@@ -17,11 +17,13 @@ h1 {
   font-family: 'Lora', Georgia, serif;
   font-weight: 600;
   text-align: center;
+  color: var(--juniper-deep-teal);
 }
 
 h2 {
   margin: 0 0 0.3rem;
   font-size: 1.55rem;
+  color: var(--juniper-deep-teal);
 }
 
 p {
@@ -32,7 +34,7 @@ p {
 
 .amount {
   display: block;
-  color: #2f88a4;
+  color: var(--juniper-teal);
   font-size: 2.2rem;
   font-family: 'Lora', Georgia, serif;
 
@@ -49,7 +51,7 @@ p {
   position: relative;
 
   &:focus-visible .flip-inner {
-    box-shadow: 0 0 0 3px #2f88a4;
+    box-shadow: 0 0 0 3px var(--juniper-teal);
   }
 }
 
@@ -62,14 +64,16 @@ p {
 .flip-front,
 .flip-back {
   grid-area: 1 / 1;
-  border: 1px solid #d4dbe2;
-  background: #fff;
+  border: 1px solid var(--juniper-line);
+  background: var(--juniper-white);
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   transition: opacity 0.35s ease;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(52, 53, 54, 0.06);
 }
 
 .flip-front {
@@ -90,7 +94,7 @@ p {
 .flip-back {
   opacity: 0;
   pointer-events: none;
-  background: #f5f9fb;
+  background: var(--juniper-powder-blue);
   justify-content: flex-start;
   padding: 0.9rem 1rem 0.75rem;
   position: relative;
@@ -121,7 +125,8 @@ p {
   padding-top: 0.6rem;
   font-family: 'Lora', Georgia, serif;
   font-size: 0.9rem;
-  color: #8fa3b5;
+  color: var(--juniper-charcoal);
+  opacity: 0.55;
   letter-spacing: 0.03em;
   text-align: right;
 }
@@ -130,14 +135,16 @@ p {
 .tap-close {
   text-align: center;
   font-size: 0.85rem;
-  color: #8fa3b5;
+  color: var(--juniper-charcoal);
+  opacity: 0.55;
   letter-spacing: 0.06em;
   padding-bottom: 0.2rem;
 }
 
 .duration {
   font-size: 1.05rem;
-  color: #8fa3b5;
+  color: var(--juniper-charcoal);
+  opacity: 0.6;
   margin-top: 0.2rem;
 }
 
@@ -158,7 +165,7 @@ p {
 
 .divider {
   border: none;
-  border-top: 1px solid #d4dbe2;
+  border-top: 1px solid var(--juniper-line);
   margin: 0.5rem 0 2rem;
 }
 
@@ -194,13 +201,13 @@ p {
   span {
     font-family: 'Lora', Georgia, serif;
     font-size: 1rem;
-    color: #5a6a7e;
+    color: var(--juniper-charcoal);
     text-align: center;
 
     strong {
       display: block;
       font-family: 'Lora', Georgia, serif;
-      color: #2f88a4;
+      color: var(--juniper-teal);
       font-size: 1.6rem;
       font-weight: 600;
 
@@ -216,7 +223,7 @@ p {
 
 .policy-footer {
   margin-top: 2rem;
-  border-top: 1px solid #d4dbe2;
+  border-top: 1px solid var(--juniper-line);
   padding-top: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -229,7 +236,8 @@ p {
 
 .cc-note {
   font-size: 1rem !important;
-  color: #5a6a7e;
+  color: var(--juniper-charcoal);
+  opacity: 0.7;
   font-style: italic;
 }
 

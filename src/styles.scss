@@ -1,6 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lora:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
 
-/* You can add global styles to this file, and also import other style files */
+/* ── Brand color palette ───────────────────────────────────────────────────── */
+:root {
+  --juniper-teal:        #0087A0;
+  --juniper-coral:       #F58F83;
+  --juniper-deep-teal:   #176F7B;
+  --juniper-charcoal:    #343536;
+  --juniper-ivory:       #FAF9F5;
+  --juniper-powder-blue: #EAF2F7;
+  --juniper-white:       #FFFFFF;
+
+  /* Aliases kept for backward compatibility with existing components */
+  --juniper-ink:    var(--juniper-charcoal);
+  --juniper-cream:  var(--juniper-ivory);
+  --juniper-blue:   var(--juniper-powder-blue);
+  --juniper-line:   rgba(23, 111, 123, 0.12);
+
+  --font-display: 'Lora', Georgia, serif;
+  --font-body:    'Lora', Georgia, serif;
+  --font-script:  'Lora', Georgia, serif;
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -8,15 +27,30 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Lora', Georgia, serif;
+  color: var(--juniper-charcoal);
+  background: var(--juniper-ivory);
   margin: 0;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 img, video {
   max-width: 100%;
   height: auto;
+}
+
+/* ── Eyebrow label — global utility ───────────────────────────────────────── */
+.eyebrow {
+  margin: 0 0 .5rem;
+  color: var(--juniper-teal);
+  font-family: 'Lora', Georgia, serif;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
