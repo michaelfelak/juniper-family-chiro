@@ -1,0 +1,147 @@
+@use '../../styles/juniper-theme';
+
+.services-booking-page {
+  background: var(--juniper-ivory);
+}
+
+.section {
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+}
+
+.services-hero {
+  background: linear-gradient(180deg, var(--juniper-white) 0%, var(--juniper-ivory) 100%);
+  border-bottom: 1px solid var(--juniper-line);
+}
+
+.brand-mark {
+  width: min(240px, 60%);
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.services-hero .display-title {
+  max-width: 760px;
+  color: var(--juniper-deep-teal);
+}
+
+.services-hero .lead {
+  max-width: 820px;
+  margin-top: 1rem;
+}
+
+.service-section {
+  background: var(--juniper-white);
+}
+
+.care-options {
+  background: var(--juniper-powder-blue);
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.service-info-card {
+  padding: 1.25rem;
+  border: 1px solid var(--juniper-line);
+  border-radius: 16px;
+  background: var(--juniper-white);
+  box-shadow: 0 12px 32px rgba(52, 53, 54, 0.06);
+}
+
+.service-info-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--juniper-deep-teal);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.service-info-card p {
+  margin: 0;
+  color: var(--juniper-charcoal);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.booking-section {
+  background: var(--juniper-deep-teal);
+  color: var(--juniper-white);
+}
+
+.booking-content {
+  text-align: center;
+}
+
+.booking-section .eyebrow {
+  color: var(--juniper-coral);
+}
+
+.booking-section .section-title {
+  color: var(--juniper-white);
+}
+
+.booking-content > p:not(.eyebrow):not(.booking-note) {
+  margin: 0.75rem 0 0;
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.booking-section .booking-actions .btn--primary {
+  background: var(--juniper-white);
+  border-color: var(--juniper-white);
+  color: var(--juniper-deep-teal);
+}
+
+.booking-section .booking-actions .btn--primary:hover {
+  background: var(--juniper-ivory);
+  border-color: var(--juniper-ivory);
+}
+
+.booking-section .booking-actions .btn--ghost {
+  border-color: var(--juniper-white);
+  color: var(--juniper-white);
+}
+
+.booking-section .booking-actions .btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.booking-note {
+  margin: 1.25rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+}
+
+.booking-actions--top {
+  justify-content: flex-start;
+}
+
+@media (max-width: 900px) {
+  .service-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-actions--top {
+    justify-content: center;
+  }
+
+  .booking-actions .btn {
+    width: 100%;
+  }
+}
