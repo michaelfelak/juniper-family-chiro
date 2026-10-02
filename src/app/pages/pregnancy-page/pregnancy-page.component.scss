@@ -158,6 +158,28 @@
 }
 .faq__item p { line-height: 1.65; font-size: 0.95rem; color: var(--juniper-charcoal); }
 
+.common-reasons {
+  background: var(--juniper-white);
+}
+
+.reason-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reason-list li {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--juniper-line);
+  border-radius: 12px;
+  background: var(--juniper-white);
+  color: var(--juniper-charcoal);
+  line-height: 1.45;
+}
+
 .cta {
   padding: 2rem 0;
   background: var(--juniper-deep-teal);
@@ -198,6 +220,7 @@
   .hero__blob { display: none; }
   .three-p__grid,
   .faq__grid { grid-template-columns: 1fr; }
+  .reason-list { grid-template-columns: 1fr; }
   .p-card { min-height: auto; }
   .cta__inner { align-items: flex-start; flex-direction: column; }
 }
