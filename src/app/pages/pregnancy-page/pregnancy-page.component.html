@@ -10,9 +10,6 @@
         discomfort, restore pelvic balance, and support you throughout your pregnancy and into
         motherhood.
       </p>
-      <div class="hero__actions">
-        <a class="btn btn--ghost" href="#webster">What makes Webster care different?</a>
-      </div>
     </div>
   </section>
 
@@ -123,26 +120,35 @@
       <h2 class="section-title">What moms often ask us.</h2>
 
       <div class="faq__grid">
-        <article class="faq__item">
-          <h3>Is chiropractic care safe during pregnancy?</h3>
-          <p>Yes. Chiropractic care is safe during every phase of pregnancy. We use gentle techniques, pregnancy-specific positioning, and specially designed pillows to keep you comfortable as your body changes.</p>
-        </article>
-        <article class="faq__item">
-          <h3>Can chiropractic care help with pregnancy discomfort?</h3>
-          <p>Yes. Many moms seek chiropractic care to help alleviate discomfort and support their bodies as they adapt to the physical changes of pregnancy. Care is always individualized to you and your stage of pregnancy.</p>
-        </article>
-        <article class="faq__item">
-          <h3>Does the Webster Technique turn breech babies?</h3>
-          <p>No. The Webster Technique does not turn or reposition babies. Instead, it focuses on restoring proper biomechanics to the pelvis and surrounding structures, creating the best possible environment for baby to find an optimal position for birth.</p>
-        </article>
-        <article class="faq__item">
-          <h3>How long will I need chiropractic care?</h3>
-          <p>Every pregnancy and every mom is different. We’ll make recommendations based on your individual needs, stage of pregnancy, and goals for care. As your pregnancy progresses, we’ll continue to reassess and adjust your care plan as needed.</p>
-        </article>
-        <article class="faq__item">
-          <h3>Why should I continue care after my baby is born?</h3>
-          <p>Birth is a major physical event, and the postpartum season brings new physical, chemical, and emotional stressors. Continuing care after birth can support your body as it recovers and adapts to the demands of motherhood.</p>
-        </article>
+        @for (faq of faqs; track faq.question; let i = $index) {
+          <div class="flip-wrapper"
+               [class.flipped]="isFlipped(i)"
+               (click)="toggle(i)"
+               (keydown.enter)="toggle(i)"
+               (keydown.space)="toggle(i); $event.preventDefault()"
+               role="button" tabindex="0"
+               [attr.aria-expanded]="isFlipped(i)">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>{{ faq.question }}</h3>
+                <span class="tap-hint">Tap for answer</span>
+              </div>
+              <div class="flip-back">
+                <p>{{ faq.answer }}</p>
+                @if (faq.citation) {
+                  <p class="citation">
+                    Source: Pistolese RA.
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/12183701/" target="_blank" rel="noopener"
+                       (click)="$event.stopPropagation()" (keydown.enter)="$event.stopPropagation()"
+                       (keydown.space)="$event.stopPropagation()">The Webster Technique: a chiropractic technique with obstetric implications.</a>
+                    J Manipulative Physiol Ther. 2002;25(6):E1-E9.
+                  </p>
+                }
+                <span class="tap-hint">Tap to close</span>
+              </div>
+            </div>
+          </div>
+        }
       </div>
     </div>
   </section>
