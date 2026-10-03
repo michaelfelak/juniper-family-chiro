@@ -117,6 +117,47 @@
 }
 .reason-card p { margin: .25rem 0 0; line-height: 1.55; font-size: 0.95rem; color: var(--juniper-charcoal); }
 
+.reasons__cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+
+.reason-card--detail {
+  display: block;
+}
+
+.reason-card--detail > span {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.look-like {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-left: 3px solid var(--juniper-teal);
+  border-radius: 0 12px 12px 0;
+  background: var(--juniper-powder-blue);
+}
+
+.look-like h4 {
+  margin: 0;
+  color: var(--juniper-deep-teal);
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.look-like p {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.look-like ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.2rem;
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
 .stressors {
   position: relative;
   background: var(--juniper-white);
@@ -192,6 +233,42 @@
   color: var(--juniper-charcoal);
 }
 
+.common-reasons {
+  background: var(--juniper-white);
+}
+
+.reason-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.reason-group {
+  padding: 1.25rem;
+  border: 1px solid var(--juniper-line);
+  border-radius: 16px;
+  background: var(--juniper-white);
+  box-shadow: 0 12px 32px rgba(52, 53, 54, 0.06);
+}
+
+.reason-group h3 {
+  margin: 0;
+  color: var(--juniper-deep-teal);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.reason-group .reason-list {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  line-height: 1.5;
+}
+
 .cta {
   padding: 2rem 0;
   background: var(--juniper-deep-teal);
@@ -235,9 +312,12 @@
 
   .reasons__grid,
   .what-to-expect__grid,
-  .scope__card {
+  .scope__card,
+  .reason-groups {
     grid-template-columns: 1fr;
   }
+  .reasons__cards { grid-template-columns: 1fr; }
+  .reason-group .reason-list { grid-template-columns: 1fr; }
   .stressors__grid { grid-template-columns: 1fr; }
   .hero__blob--blue,
   .hero__blob--blush { display: none; }

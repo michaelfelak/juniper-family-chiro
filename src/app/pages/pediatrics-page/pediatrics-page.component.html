@@ -10,47 +10,91 @@
           <p class="eyebrow">Pediatric chiropractic care</p>
           <h1 class="display-title">Gentle care for growing bodies.</h1>
           <p class="lead">
-            Pediatric chiropractic care at Juniper is calm, age-appropriate, and focused
-            on how your child moves, adapts, and feels in their body.
+            From the stress of birth to rolling, crawling, learning to walk, falls, sports, starting
+            school, and all the changes that come with growing up, kids experience physical and
+            emotional stress, too. Gentle chiropractic care supports their developing nervous
+            system, helping their bodies better adapt through every stage of childhood.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--ghost" href="#why-care">Why families come in</a>
+            <a class="btn btn--ghost" [routerLink]="['/services-booking']" fragment="booking">Schedule Your Child’s Visit</a>
           </div>
         </div>
       </div>
 
       <div class="hero__photo-wrap">
-        <img class="hero__photo" src="images/pediatrics-hero.jpg" alt="Chiropractor adjusting a child" />
+        <img class="hero__photo" src="images/pediatrics-hero.jpg" alt="Chiropractor adjusting a child">
       </div>
     </div>
   </section>
 
   <section id="why-care" class="reasons section">
-    <div class="page-shell reasons__grid">
-      <div>
-        <p class="eyebrow">Why parents bring children in</p>
-        <h2 class="section-title">Children experience physical stress, too.</h2>
-        <p class="lead">
-          Birth, growth, falls, sports, school posture, and everyday play can all place
-          changing demands on a child's musculoskeletal system.
-        </p>
-      </div>
-
+    <div class="page-shell">
+      <p class="eyebrow">Why parents bring children in</p>
       <div class="reasons__cards">
-        <article class="reason-card">
+        <article class="reason-card reason-card--detail">
           <span>01</span>
-          <h3>Birth & infancy</h3>
-          <p>Gentle evaluation of movement, symmetry, and musculoskeletal function.</p>
+          <h3>Birth &amp; Infancy</h3>
+          <p>
+            Birth is one of the first major physical stresses a baby experiences. Whether a baby is
+            born vaginally or by cesarean, the birth process can place stress on a newborn’s neck
+            and developing nervous system. Gentle chiropractic care helps address tension and
+            restore balance as your baby adapts to life outside the womb.
+          </p>
+          <aside class="look-like">
+            <h4>What can tension look like in a baby?</h4>
+            <p>Tension patterns in babies can show up in ways you may not immediately connect to their neck or spine.</p>
+            <ul>
+              <li>Preferring to look to one side</li>
+              <li>Nursing better on one side</li>
+              <li>Arching the back</li>
+              <li>Difficulty burping</li>
+              <li>Seeming tense or uncomfortable</li>
+            </ul>
+          </aside>
         </article>
-        <article class="reason-card">
+        <article class="reason-card reason-card--detail">
           <span>02</span>
-          <h3>Growth & milestones</h3>
-          <p>Support for a body that is rapidly changing in size, coordination, and movement.</p>
+          <h3>Growth &amp; Milestones</h3>
+          <p>
+            Rolling, sitting, crawling, walking, and running are exciting milestones that require
+            your child’s body and nervous system to continually adapt to new skills. Gentle
+            chiropractic care supports healthy movement and nervous system function as your child
+            develops coordination, balance, and confidence in their growing body.
+          </p>
+          <aside class="look-like">
+            <h4>What can this look like?</h4>
+            <ul>
+              <li>Atypical gait or posture</li>
+              <li>Favoring one side</li>
+              <li>Delayed milestones</li>
+              <li>Sleep disturbances</li>
+              <li>Grinding or clenching teeth</li>
+              <li>Difficulty with teething</li>
+              <li>Emotional outbursts</li>
+            </ul>
+          </aside>
         </article>
-        <article class="reason-card">
+        <article class="reason-card reason-card--detail">
           <span>03</span>
-          <h3>Falls, sports & posture</h3>
-          <p>Assessment when repetitive strain or physical activity is affecting comfort or mobility.</p>
+          <h3>Everyday Childhood</h3>
+          <p>
+            Kids are made to move, play, explore, and occasionally take a tumble. Falls, playground
+            adventures, bike rides, sports, heavy backpacks, and hours spent sitting at school all
+            place different demands on a growing body. Chiropractic care supports healthy movement
+            and helps the nervous system adapt to the physical stresses that come with being a kid.
+          </p>
+          <aside class="look-like">
+            <h4>What can this look like?</h4>
+            <ul>
+              <li>Growing pains or body aches</li>
+              <li>Headaches</li>
+              <li>Difficulty sleeping or settling at night</li>
+              <li>Changes in posture</li>
+              <li>Discomfort after sports, falls, or rough play</li>
+              <li>Difficulty regulating emotions</li>
+              <li>Trouble focusing or sitting still</li>
+            </ul>
+          </aside>
         </article>
       </div>
     </div>
@@ -58,35 +102,26 @@
 
   <section class="stressors section">
     <div class="page-shell">
-      <p class="eyebrow">The whole child</p>
-      <h2 class="section-title">Three kinds of stress that can affect how kids feel.</h2>
+      <h2 class="section-title">The Whole Child</h2>
+      <p class="lead">
+        Children experience more than just physical stress. Their nervous systems are constantly
+        adapting to physical, chemical, and emotional stressors as they grow. Chiropractic care
+        supports the nervous system and your child’s ability to adapt through every season of
+        childhood.
+      </p>
 
       <div class="stressors__grid">
-        <article class="stressor stressor--emotional">
-          <h3 class="script-title">Emotional</h3>
-          <p>
-            Big feelings, poor sleep, new routines, and stress can influence muscle tension,
-            posture, and the way children carry themselves. We consider these factors as part
-            of the overall picture.
-          </p>
-        </article>
-
         <article class="stressor stressor--physical">
           <h3 class="script-title">Physical</h3>
-          <p>
-            Falls, sports, backpacks, prolonged sitting, growth spurts, and repetitive
-            movement can affect comfort and mobility. A chiropractic exam looks at how the
-            spine and joints are moving.
-          </p>
+          <p>Growth spurts, falls, sports, repetitive activities, prolonged sitting, and everyday play continually place new demands on a growing body. Supporting healthy movement and nervous system function helps children adapt to those physical demands.</p>
         </article>
-
         <article class="stressor stressor--environmental">
-          <h3 class="script-title">Environmental</h3>
-          <p>
-            Sleep, hydration, nutrition, routines, and the child's broader environment can
-            influence how they feel day to day. These factors are important context, even
-            though chiropractic care does not treat allergies, toxicity, or medical disease.
-          </p>
+          <h3 class="script-title">Chemical</h3>
+          <p>Food, medications, illness, cleaning products, and other environmental exposures are all things a child’s body must process and respond to. These chemical stressors are another part of what a developing nervous system continually adapts to.</p>
+        </article>
+        <article class="stressor stressor--emotional">
+          <h3 class="script-title">Emotional</h3>
+          <p>Starting school, changes in routine, new siblings, friendships, growing independence, and eventually puberty all bring new emotions and experiences for a child’s nervous system to process and adapt to.</p>
         </article>
       </div>
     </div>
@@ -95,30 +130,33 @@
   <section class="what-to-expect section">
     <div class="page-shell what-to-expect__grid">
       <div>
-        <p class="eyebrow">What to expect</p>
-        <h2 class="section-title">Pediatric adjustments are different from adult adjustments.</h2>
+        <h2 class="section-title">What to Expect</h2>
+        <p class="lead">
+          Adjusting a baby or child looks very different from adjusting an adult. Our pediatric care
+          is specific and designed with growing bodies in mind.
+        </p>
       </div>
 
       <div class="steps">
         <article>
           <span>1</span>
           <div>
-            <h3>We start with history and observation.</h3>
-            <p>We talk about your concerns, development, activity, and any relevant medical history.</p>
+            <h3>Gentle Techniques</h3>
+            <p>Pediatric adjustments use gentle, specific pressure—about six ounces, similar to the amount of pressure you would use to check a tomato for ripeness. Techniques are always adapted to your child’s age, size, and comfort.</p>
           </div>
         </article>
         <article>
           <span>2</span>
           <div>
-            <h3>We assess movement and function.</h3>
-            <p>The exam is adapted for age and may include posture, range of motion, and gentle palpation.</p>
+            <h3>Child-Led Visits</h3>
+            <p>We believe in building trust and respecting your child’s body autonomy. If your child isn’t feeling it that day, that’s okay! We’ll never force an adjustment or adjust a child against their will. We can play, get comfortable with the space, and try again another day. Our goal is for your child to feel safe, respected, and comfortable in our office.</p>
           </div>
         </article>
         <article>
           <span>3</span>
           <div>
-            <h3>Care is gentle and individualized.</h3>
-            <p>When chiropractic care is appropriate, techniques are selected for the child's age, size, and comfort.</p>
+            <h3>Clear Communication</h3>
+            <p>We want you to understand what we’re seeing and why we’re making our recommendations. We’ll explain what we find, answer your questions, and make sure you feel comfortable with your child’s care.</p>
           </div>
         </article>
       </div>
@@ -128,15 +166,85 @@
   <section class="scope section">
     <div class="page-shell scope__card">
       <div>
-        <p class="eyebrow">Our role</p>
-        <h2 class="section-title">Chiropractic is one part of a child's care team.</h2>
+        <h2 class="section-title">Collaborative Care</h2>
       </div>
       <p>
-        We do not replace your pediatrician, therapist, lactation consultant, or other
-        healthcare providers. When a concern is outside our scope, we refer or coordinate
-        with the appropriate professional.
+        We believe children are best supported when their care team works together. When
+        appropriate, we’re happy to collaborate with your child’s pediatrician, lactation
+        consultant, therapist, or other healthcare providers to help support your family’s goals.
       </p>
     </div>
   </section>
 
+  <section class="common-reasons section">
+    <div class="page-shell">
+      <p class="eyebrow">Pediatric care</p>
+      <h2 class="section-title">Common Reasons Parents Seek Chiropractic Care for Their Child</h2>
+      <div class="reason-groups">
+        <article class="reason-group">
+          <h3>Babies &amp; Infants</h3>
+          <ul class="reason-list">
+            <li>Feeding difficulties</li>
+            <li>Fussiness at the breast or bottle</li>
+            <li>Preference for nursing on one side</li>
+            <li>Head-turning preference</li>
+            <li>Arching or body tension</li>
+            <li>Difficulty burping</li>
+            <li>Spitting up</li>
+            <li>Constipation</li>
+            <li>Trouble sleeping</li>
+            <li>Recurrent ear infections</li>
+          </ul>
+        </article>
+        <article class="reason-group">
+          <h3>Growing Kids</h3>
+          <ul class="reason-list">
+            <li>Growing pains</li>
+            <li>Headaches</li>
+            <li>Neck or back discomfort</li>
+            <li>Posture concerns</li>
+            <li>Sports-related aches and tension</li>
+            <li>Frequent falls or injuries</li>
+            <li>Trouble sleeping</li>
+            <li>Constipation</li>
+            <li>Recurrent ear infections</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq section">
+    <div class="page-shell">
+      <p class="eyebrow">Pediatric FAQ</p>
+      <h2 class="section-title">What parents often ask us.</h2>
+
+      <div class="faq__grid">
+        <article class="faq__item">
+          <h3>Is chiropractic care safe for babies and children?</h3>
+          <p>Yes. Pediatric chiropractic care uses techniques specifically adapted to your child’s age, size, and stage of development.</p>
+        </article>
+        <article class="faq__item">
+          <h3>How soon can my baby be adjusted?</h3>
+          <p>Babies can receive chiropractic care from birth. Because birth itself can place stress on a newborn’s neck and nervous system, some families choose to have their baby checked within the first days or weeks of life.</p>
+        </article>
+        <article class="faq__item">
+          <h3>Will you pop or crack my child’s neck or back?</h3>
+          <p>No. Pediatric adjustments do not involve the popping or cracking you may associate with adult chiropractic adjustments. We use specific, low-force techniques appropriate for your child’s age and size. For babies, we use about six ounces of pressure—similar to the amount you would use to check a tomato for ripeness.</p>
+        </article>
+        <article class="faq__item">
+          <h3>Why might I bring my baby to a chiropractor?</h3>
+          <p>Parents bring their babies to us for many different reasons. Sometimes they notice tension patterns, such as preferring to look or nurse to one side. Other families come in with concerns about fussiness at the breast or bottle, spitting up, constipation, or sleep issues. All can be signs of stress. We’ll listen to what you’re noticing, evaluate your baby, and explain what we find.</p>
+        </article>
+        <article class="faq__item">
+          <h3>Does my child have to have a problem to see a chiropractor?</h3>
+          <p>No, many families choose chiropractic care as part of their child’s overall wellness. The nervous system plays an important role in coordinating the functions throughout the body, including communicating with the immune and endocrine systems. Our goal with chiropractic care is to support healthy nervous system function as your child grows, develops, and adapts to the physical, chemical, and emotional stressors of everyday life.</p>
+        </article>
+        <article class="faq__item">
+          <h3>What if my child doesn’t want to be adjusted?</h3>
+          <p>That’s okay! We believe in respecting your child’s body autonomy and building trust. We will never force an adjustment or adjust a child against their will. Sometimes the best visit is simply about getting comfortable with the office, building trust, and trying again another day.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 </main>
