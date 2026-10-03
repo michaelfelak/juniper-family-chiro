@@ -7,11 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './services-booking.component.scss',
 })
 export class ServicesBookingComponent {
-  private readonly bookingEmail = 'juniperfamilychiro@gmail.com';
+  // Both locations share one Jane App site; the app prompts for the location.
+  private readonly bookingUrl = 'https://juniperfamilychiro.janeapp.com';
 
-  // TODO: ADD NORTH AUGUSTA BOOKING URL
-  readonly northAugustaBookingHref = `mailto:${this.bookingEmail}?subject=Booking%20in%20North%20Augusta`;
-
-  // TODO: ADD GREENVILLE BOOKING URL
-  readonly greenvilleBookingHref = `mailto:${this.bookingEmail}?subject=Booking%20in%20Greenville`;
+  readonly northAugustaBookingHref = this.bookingUrl;
+  readonly greenvilleBookingHref = this.bookingUrl;
 }
