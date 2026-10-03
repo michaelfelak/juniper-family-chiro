@@ -29,7 +29,7 @@ export class PregnancyPageComponent {
     {
       question: 'Does the Webster Technique turn breech babies?',
       answer:
-        'No. The Webster Technique does not turn or reposition babies. Instead, it focuses on restoring proper biomechanics to the pelvis and surrounding structures, creating the best possible environment for baby to find an optimal position for birth. Research has reported resolution of breech positioning in approximately 92% of cases following the use of the Webster technique.',
+        'No. The Webster Technique does not turn or reposition babies. Instead, it focuses on restoring proper biomechanics to the pelvis and surrounding structures, creating the best possible environment for baby to find an optimal position for birth. Research has reported resolution of breech positioning in approximately 92% of cases following the use of the Webster Technique.',
       citation: true,
     },
     {
