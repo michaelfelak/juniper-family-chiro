@@ -8,8 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ServicesBookingComponent {
   // Both locations share one Jane App site; the app prompts for the location.
-  private readonly bookingUrl = 'https://juniperfamilychiro.janeapp.com';
-
-  readonly northAugustaBookingHref = this.bookingUrl;
-  readonly greenvilleBookingHref = this.bookingUrl;
+  readonly bookingUrl = 'https://juniperfamilychiro.janeapp.com';
 }
