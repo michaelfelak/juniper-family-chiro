@@ -19,12 +19,27 @@
   <nav class="side-nav" [class.drawer-open]="menuOpen()" aria-label="Main navigation">
     <p class="brand-name">Juniper Family Chiropractic</p>
     <a routerLink="/welcome"         routerLinkActive="active-link" (click)="closeMenu()">Welcome</a>
+    <ng-container *ngTemplateOutlet="subnav; context: { page: 'welcome' }" />
     <a routerLink="/pregnancy"       routerLinkActive="active-link" (click)="closeMenu()">Pregnancy Care</a>
+    <ng-container *ngTemplateOutlet="subnav; context: { page: 'pregnancy' }" />
     <a routerLink="/pediatrics"      routerLinkActive="active-link" (click)="closeMenu()">Pediatrics</a>
+    <ng-container *ngTemplateOutlet="subnav; context: { page: 'pediatrics' }" />
     <a routerLink="/services-booking" routerLinkActive="active-link" (click)="closeMenu()">Services &amp; Booking</a>
+    <ng-container *ngTemplateOutlet="subnav; context: { page: 'services-booking' }" />
     <a routerLink="/about-us"        routerLinkActive="active-link" (click)="closeMenu()">About Us</a>
+    <ng-container *ngTemplateOutlet="subnav; context: { page: 'about-us' }" />
     <a class="book-now-nav" href="https://juniperfamilychiro.janeapp.com" (click)="closeMenu()">Book Now</a>
   </nav>
+
+  <ng-template #subnav let-page="page">
+    @if (sectionsFor(page).length) {
+      <ul class="sub-nav">
+        @for (section of sectionsFor(page); track section.id) {
+          <li><a [href]="'#' + section.id" (click)="goToSection($event, section.id)">{{ section.label }}</a></li>
+        }
+      </ul>
+    }
+  </ng-template>
 
   <main class="page-content">
     <router-outlet />

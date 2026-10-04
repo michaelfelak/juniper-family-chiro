@@ -4,7 +4,7 @@
 
   <div class="staff-list">
     @for (member of staff(); track member.name) {
-      <article class="staff-card">
+      <article class="staff-card" [attr.id]="'dr-' + member.name.split(' ')[1].toLowerCase()">
         <div class="photo-col">
           @if (member.photo) {
             <img [src]="member.photo" [alt]="member.name" class="staff-photo" />
