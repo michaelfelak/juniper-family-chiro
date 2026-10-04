@@ -154,6 +154,36 @@
   }
 }
 
+.intro-block {
+  max-width: 860px;
+  width: 100%;
+  padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem) 0;
+  text-align: center;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
+
+  a {
+    padding: 0.7rem 1.4rem;
+    border: 1px solid var(--juniper-teal);
+    border-radius: 999px;
+    color: var(--juniper-teal);
+    font-family: 'Lora', Georgia, serif;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: var(--juniper-powder-blue);
+      color: var(--juniper-deep-teal);
+    }
+  }
+}
+
 .mission-block {
   max-width: 860px;
   width: 100%;
