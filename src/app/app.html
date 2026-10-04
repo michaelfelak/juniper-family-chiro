@@ -19,7 +19,6 @@
   <nav class="side-nav" [class.drawer-open]="menuOpen()" aria-label="Main navigation">
     <p class="brand-name">Juniper Family Chiropractic</p>
     <a routerLink="/welcome"         routerLinkActive="active-link" (click)="closeMenu()">Welcome</a>
-    <ng-container *ngTemplateOutlet="subnav; context: { page: 'welcome' }" />
     <a routerLink="/pregnancy"       routerLinkActive="active-link" (click)="closeMenu()">Pregnancy Care</a>
     <ng-container *ngTemplateOutlet="subnav; context: { page: 'pregnancy' }" />
     <a routerLink="/pediatrics"      routerLinkActive="active-link" (click)="closeMenu()">Pediatrics</a>
