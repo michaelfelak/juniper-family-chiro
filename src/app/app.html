@@ -19,10 +19,11 @@
   <nav class="side-nav" [class.drawer-open]="menuOpen()" aria-label="Main navigation">
     <p class="brand-name">Juniper Family Chiropractic</p>
     <a routerLink="/welcome"         routerLinkActive="active-link" (click)="closeMenu()">Welcome</a>
-    <a routerLink="/pregnancy-page"  routerLinkActive="active-link" (click)="closeMenu()">Pregnancy Care</a>
+    <a routerLink="/pregnancy"       routerLinkActive="active-link" (click)="closeMenu()">Pregnancy Care</a>
     <a routerLink="/pediatrics"      routerLinkActive="active-link" (click)="closeMenu()">Pediatrics</a>
     <a routerLink="/services-booking" routerLinkActive="active-link" (click)="closeMenu()">Services &amp; Booking</a>
     <a routerLink="/about-us"        routerLinkActive="active-link" (click)="closeMenu()">About Us</a>
+    <a class="book-now-nav" href="https://juniperfamilychiro.janeapp.com" (click)="closeMenu()">Book Now</a>
   </nav>
 
   <main class="page-content">
