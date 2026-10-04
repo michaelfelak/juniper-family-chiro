@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss',
+  imports: [RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WelcomeComponent {}
