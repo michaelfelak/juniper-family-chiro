@@ -12,7 +12,6 @@ interface PageSection {
 
 const PAGE_SECTIONS: Record<string, PageSection[]> = {
   pregnancy: [
-    { id: 'common-reasons', label: 'Common Reasons' },
     { id: 'mission', label: 'Our Mission' },
     { id: 'webster', label: 'Webster Analysis' },
     { id: 'birth-preparation', label: 'Birth Preparation' },
@@ -20,10 +19,8 @@ const PAGE_SECTIONS: Record<string, PageSection[]> = {
   ],
   pediatrics: [
     { id: 'why-care', label: 'Why parents come' },
-    { id: 'common-reasons', label: 'Common Reasons' },
     { id: 'whole-child', label: 'The whole child' },
     { id: 'what-to-expect', label: 'What to expect' },
-    { id: 'collaborative-care', label: 'Collaborative care' },
     { id: 'faq', label: 'FAQ' },
   ],
   'services-booking': [
