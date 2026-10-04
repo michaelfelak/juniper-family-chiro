@@ -4,12 +4,31 @@
     <div class="page-shell hero__copy">
       <img class="brand-mark" src="images/FelakLogo-01.png" alt="Juniper Family Chiropractic">
       <p class="eyebrow">Pregnancy chiropractic care</p>
-      <h1 class="display-title">Care for a more comfortable pregnancy.</h1>
+      <h1 class="display-title">Care for a more comfortable pregnancy</h1>
       <p class="lead">
         Chiropractic care is safe during every phase of pregnancy. Our goal is to help alleviate
         discomfort, restore pelvic balance, and support you throughout your pregnancy and into
         motherhood.
       </p>
+    </div>
+  </section>
+
+  <section class="common-reasons section">
+    <div class="page-shell">
+      <p class="eyebrow">Pregnancy care</p>
+      <h2 class="section-title">Common Reasons Pregnant Patients Seek Chiropractic Care</h2>
+      <ul class="reason-list">
+        <li>Low back pain</li>
+        <li>Hip &amp; pelvic discomfort</li>
+        <li>Sciatica</li>
+        <li>Pubic bone pain</li>
+        <li>Round ligament pain</li>
+        <li>Headaches</li>
+        <li>Trouble sleeping</li>
+        <li>Constipation</li>
+        <li>Heartburn</li>
+        <li>Restless legs</li>
+      </ul>
     </div>
   </section>
 
@@ -30,34 +49,35 @@
   <section id="webster" class="webster section">
     <div class="page-shell webster__grid">
       <div class="webster__copy">
-        <p class="eyebrow">Webster Technique</p>
-        <h2 class="section-title">Webster Technique</h2>
+        <h2 class="section-title">Webster Analysis</h2>
         <p>
           Pelvic imbalance during pregnancy can lead to altered nerve function to the uterus, as
           well as changes to the bony and soft tissue structures of the pelvis. Altered biomechanics
-          can affect the baby’s ability to get into the optimal position for birth. Undue tension on
-          the uterus, altered pelvic biomechanics, and baby positioning are the three main causes of
-          dystocia, or difficult labor. The Webster Technique restores proper biomechanics to the
-          pelvis and its supporting structures. This allows for a safer, easier birth. The Webster
-          Technique can be used throughout pregnancy, but the earlier it is implemented, the more
-          likely you are to benefit from care.
+          can affect the baby’s ability to get into the optimal position for birth.
+        </p>
+        <p>
+          Undue tension on the uterus, altered pelvic biomechanics, and baby positioning are the
+          three main causes of dystocia, or difficult labor. The Webster Analysis restores proper
+          biomechanics to the pelvis and its supporting structures. This allows for a safer, easier
+          birth.
+        </p>
+        <p>
+          The Webster Analysis can be used throughout pregnancy, but the earlier it is implemented,
+          the more likely you are to benefit from care.
         </p>
       </div>
 
       <div class="webster__highlights">
         <article class="soft-card">
-          <span class="number">01</span>
           <h3>Comfort</h3>
           <p>Gentle chiropractic care can help alleviate the aches and discomfort that may come as your body changes throughout pregnancy.</p>
         </article>
         <article class="soft-card">
-          <span class="number">02</span>
-          <h3>Pelvic Balance</h3>
+          <h3>Pelvic balance</h3>
           <p>By reducing tension in the pelvis and surrounding soft tissue, chiropractic care can help restore balance and proper movement as your body prepares for birth.</p>
         </article>
         <article class="soft-card">
-          <span class="number">03</span>
-          <h3>Individualized Care</h3>
+          <h3>Individualized care</h3>
           <p>Every pregnancy is different. Your care is tailored to your stage of pregnancy, your body, and your comfort, using gentle techniques and pregnancy-specific positioning.</p>
         </article>
       </div>
@@ -67,7 +87,7 @@
   <section class="three-p section">
     <div class="page-shell">
       <div class="three-p__intro">
-        <p class="eyebrow">BIRTH PREPARATION</p>
+        <p class="eyebrow">Birth preparation</p>
         <h2 class="section-title">Power, Passage &amp; Passenger</h2>
         <p class="lead">
           Three important factors work together during labor and birth: Power, Passage, and
@@ -95,61 +115,35 @@
     </div>
   </section>
 
-  <section class="common-reasons section">
-    <div class="page-shell">
-      <p class="eyebrow">Pregnancy care</p>
-      <h2 class="section-title">Common Reasons Pregnant Patients Seek Chiropractic Care</h2>
-      <ul class="reason-list">
-        <li>Low back pain</li>
-        <li>Hip &amp; pelvic discomfort</li>
-        <li>Sciatica</li>
-        <li>Pubic bone pain</li>
-        <li>Round ligament pain</li>
-        <li>Headaches</li>
-        <li>Trouble sleeping</li>
-        <li>Constipation</li>
-        <li>Heartburn</li>
-        <li>Restless legs</li>
-      </ul>
-    </div>
-  </section>
-
   <section class="faq section">
     <div class="page-shell">
       <p class="eyebrow">Pregnancy FAQ</p>
-      <h2 class="section-title">What moms often ask us.</h2>
+      <h2 class="section-title">What moms often ask us</h2>
 
-      <div class="faq__grid">
-        @for (faq of faqs; track faq.question; let i = $index) {
-          <div class="flip-wrapper"
-               [class.flipped]="isFlipped(i)"
-               (click)="toggle(i)"
-               (keydown.enter)="toggle(i)"
-               (keydown.space)="toggle(i); $event.preventDefault()"
-               role="button" tabindex="0"
-               [attr.aria-expanded]="isFlipped(i)">
-            <div class="flip-inner">
-              <div class="flip-front">
-                <h3>{{ faq.question }}</h3>
-                <span class="tap-hint">Tap for answer</span>
-              </div>
-              <div class="flip-back">
-                <p>{{ faq.answer }}</p>
-                @if (faq.citation) {
-                  <p class="citation">
-                    Source: Pistolese RA.
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/12183701/" target="_blank" rel="noopener"
-                       (click)="$event.stopPropagation()" (keydown.enter)="$event.stopPropagation()"
-                       (keydown.space)="$event.stopPropagation()">The Webster Technique: a chiropractic technique with obstetric implications.</a>
-                    J Manipulative Physiol Ther. 2002;25(6):E1-E9.
-                  </p>
-                }
-                <span class="tap-hint">Tap to close</span>
-              </div>
-            </div>
-          </div>
+      <div class="faq-list">
+        @for (faq of faqs; track faq.question) {
+          <article>
+            <h3>{{ faq.question }}</h3>
+            @for (paragraph of faq.answer; track paragraph) {
+              <p>{{ paragraph }}</p>
+            }
+            @if (faq.citation) {
+              <p class="citation">
+                Source: Pistolese RA.
+                <a href="https://pubmed.ncbi.nlm.nih.gov/12183701/" target="_blank" rel="noopener">The Webster Technique: a chiropractic technique with obstetric implications.</a>
+                J Manipulative Physiol Ther. 2002;25(6):E1-E9.
+              </p>
+            }
+          </article>
         }
       </div>
+    </div>
+  </section>
+
+  <section class="book-band">
+    <div class="page-shell book-band__inner">
+      <h2>Ready to schedule your visit?</h2>
+      <a class="btn" [href]="bookingUrl">Book Now</a>
     </div>
   </section>
 </main>

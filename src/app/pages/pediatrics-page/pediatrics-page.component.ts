@@ -9,4 +9,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './pediatrics-page.component.html',
   styleUrl: './pediatrics-page.component.scss'
 })
-export class PediatricsPageComponent {}
+export class PediatricsPageComponent {
+  readonly bookingUrl = 'https://juniperfamilychiro.janeapp.com';
+}
