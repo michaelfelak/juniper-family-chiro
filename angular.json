@@ -24,7 +24,7 @@
               "base": "docs",
               "browser": ""
             },
-            "baseHref": "/juniper-family-chiro/",
+            "baseHref": "/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",

@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <title>Juniper Family Chiropractic</title>
-    <base href="/juniper-family-chiro/" />
+    <base href="/" />
     <script>
       // GitHub Pages SPA: restore the original URL encoded by 404.html
       (function () {
         var p = window.location.search.match(/[?&]p=([^&]*)/);
         if (p) {
-          var path = decodeURIComponent(p[1]);
-          // Strip the repo prefix if present so Angular router sees the correct path
-          path = path.replace(/^juniper-family-chiro\//, '');
-          window.history.replaceState(
-            null, null,
-            '/' + 'juniper-family-chiro/' + path
-          );
+          window.history.replaceState(null, null, '/' + decodeURIComponent(p[1]));
         }
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Family chiropractic care with a special focus on pregnancy and pediatrics in Greenville and North Augusta, South Carolina." />
+    <link rel="canonical" href="https://juniperfamilychiro.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Juniper Family Chiropractic" />
+    <meta property="og:title" content="Juniper Family Chiropractic" />
+    <meta property="og:url" content="https://juniperfamilychiro.com/" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
