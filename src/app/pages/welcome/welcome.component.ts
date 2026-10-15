@@ -8,4 +8,5 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WelcomeComponent {}
+export class WelcomeComponent {
+}

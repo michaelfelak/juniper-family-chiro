@@ -64,6 +64,9 @@ address {
 .location-name {
   font-weight: 600;
   color: var(--juniper-white);
+  text-decoration: none;
+
+  &:hover { color: var(--juniper-coral); }
 }
 
 .footer-map-link {
@@ -83,8 +86,7 @@ address {
 }
 
 .footer-email,
-.footer-phone,
-.footer-book {
+.footer-phone {
   display: inline-block;
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.82);

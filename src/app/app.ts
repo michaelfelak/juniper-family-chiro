@@ -1,9 +1,11 @@
 import { Component, signal, HostListener, inject } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive, RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { filter } from 'rxjs/operators';
+import { createStructuredData } from './data/location-data';
 
 interface PageSection {
   id: string;
@@ -57,19 +59,55 @@ export class App {
   constructor() {
     const router = inject(Router);
     const meta = inject(Meta);
+    const document = inject(DOCUMENT);
     router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe(() => {
         let route = router.routerState.snapshot.root;
         while (route.firstChild) route = route.firstChild;
         const description = route.data['description'];
-        if (description) meta.updateTag({ name: 'description', content: description });
+        const canonicalUrl = route.data['canonicalUrl'];
+        const title = route.title;
+        if (description) {
+          meta.updateTag({ name: 'description', content: description });
+          meta.updateTag({ property: 'og:description', content: description });
+        }
+        if (title) meta.updateTag({ property: 'og:title', content: title });
+        if (canonicalUrl) {
+          const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+          if (canonical) canonical.href = canonicalUrl;
+          else {
+            const link = document.createElement('link');
+            link.rel = 'canonical';
+            link.href = canonicalUrl;
+            document.head.appendChild(link);
+          }
+          meta.updateTag({ property: 'og:url', content: canonicalUrl });
+        }
+        let structuredData = document.getElementById('juniper-structured-data') as HTMLScriptElement | null;
+        if (!structuredData) {
+          structuredData = document.createElement('script');
+          structuredData.id = 'juniper-structured-data';
+          structuredData.type = 'application/ld+json';
+          document.head.appendChild(structuredData);
+        }
+        structuredData.textContent = JSON.stringify(createStructuredData());
         this.currentPage.set(route.url[0]?.path ?? '');
         const fragment = route.fragment;
-        if (fragment) {
-          setTimeout(() => document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-        } else {
-          document.querySelector('.page-content')?.scrollTo({ top: 0, behavior: 'instant' });
+        if (document.defaultView) {
+          if (fragment) {
+            setTimeout(() => {
+              const target = document.getElementById(fragment);
+              if (target && typeof target.scrollIntoView === 'function') {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            });
+          } else {
+            const pageContent = document.querySelector<HTMLElement>('.page-content');
+            if (pageContent && typeof pageContent.scrollTo === 'function') {
+              pageContent.scrollTo({ top: 0, behavior: 'instant' });
+            }
+          }
         }
       });
   }

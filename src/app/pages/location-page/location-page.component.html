@@ -1,0 +1,60 @@
+<main class="location-page">
+  <section class="location-hero">
+    <div class="location-container location-hero__grid">
+      <div class="location-intro">
+        <p class="eyebrow">{{ location.city }} office</p>
+        <h1>{{ location.h1 }}</h1>
+        <p>{{ location.introduction }}</p>
+        <a class="location-button" [href]="location.bookingUrl" (click)="trackBookingClick()">
+          Book {{ location.city }} Appointment
+        </a>
+      </div>
+      <aside class="location-card">
+        <p class="eyebrow">Office information</p>
+        <h2>Juniper Family Chiropractic</h2>
+        <address>
+          {{ location.streetAddress }}<br />
+          {{ location.city }}, {{ location.state }} {{ location.postalCode }}
+        </address>
+        <a class="location-card__phone" [href]="location.phoneHref">
+          {{ location.phoneDisplay }}
+        </a>
+        <a class="location-directions" [href]="location.directionsUrl" target="_blank" rel="noopener">
+          Get directions to our {{ location.city }} office
+          <span aria-hidden="true">↗</span>
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="location-care">
+    <div class="location-container">
+      <p class="eyebrow">Care at our {{ location.city }} office</p>
+      <h2>Pregnancy and pediatric chiropractic care for your family</h2>
+      <p>
+        {{ location.doctorName }} welcomes families seeking pregnancy and pediatric chiropractic
+        care at our {{ location.city }} office. Explore each service to learn more about our
+        approach and what to expect during a visit.
+      </p>
+      <div class="location-service-links">
+        <a routerLink="/pregnancy">Explore pregnancy chiropractic care</a>
+        <a routerLink="/pediatrics">Explore pediatric chiropractic care</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-visit">
+    <div class="location-container">
+      <div class="location-other">
+        <p>
+          Looking for our other office? Visit our
+          <a [routerLink]="location.slug === 'greenville' ? '/north-augusta' : '/greenville'">
+            {{ location.slug === 'greenville' ? 'North Augusta' : 'Greenville' }} location page
+          </a>
+          for its address, phone number, and directions.
+        </p>
+        <a routerLink="/about-us">Meet the Juniper team</a>
+      </div>
+    </div>
+  </section>
+</main>

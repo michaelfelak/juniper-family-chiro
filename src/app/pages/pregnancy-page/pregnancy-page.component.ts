@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 interface PregnancyFaq {
   question: string;
@@ -10,13 +11,11 @@ interface PregnancyFaq {
 @Component({
   selector: 'app-pregnancy-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './pregnancy-page.component.html',
   styleUrl: './pregnancy-page.component.scss'
 })
 export class PregnancyPageComponent {
-  readonly bookingUrl = 'https://juniperfamilychiro.janeapp.com';
-
   readonly faqs: PregnancyFaq[] = [
     {
       question: 'Is chiropractic care safe during pregnancy?',
