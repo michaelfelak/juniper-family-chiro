@@ -93,6 +93,16 @@
   }
 }
 
+.location-nav__label {
+  display: block;
+  padding: 0.7rem 0.55rem 0.2rem;
+  color: var(--juniper-charcoal);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 .book-now-nav {
   margin-top: 0.8rem;
   background: var(--juniper-teal);
@@ -221,4 +231,3 @@
     overflow-y: auto;
   }
 }
-

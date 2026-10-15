@@ -1,0 +1,150 @@
+@use '../../styles/juniper-theme';
+
+.location-page {
+  background: var(--juniper-ivory);
+}
+
+.location-container {
+  width: min(1120px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.location-hero {
+  padding: clamp(2rem, 6vw, 5rem) 0;
+  background: linear-gradient(135deg, var(--juniper-white), var(--juniper-powder-blue));
+}
+
+.location-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.location-page h1,
+.location-page h2 {
+  color: var(--juniper-deep-teal);
+  font-family: var(--font-display);
+}
+
+.location-page h1 {
+  max-width: 780px;
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.location-page h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+.location-intro > p:not(.eyebrow),
+.location-care p {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.location-intro .location-button {
+  margin-top: 1rem;
+}
+
+.location-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--juniper-teal);
+  color: var(--juniper-white);
+  font: 600 1rem var(--font-display);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.location-button:hover,
+.location-button:focus-visible {
+  background: var(--juniper-deep-teal);
+}
+
+.location-card__phone,
+.location-directions,
+.location-service-links a,
+.location-other a {
+  color: var(--juniper-deep-teal);
+  font-weight: 600;
+  text-underline-offset: 0.18em;
+}
+
+.location-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--juniper-line);
+  border-radius: 18px;
+  background: var(--juniper-white);
+  box-shadow: 0 12px 32px rgba(52, 53, 54, 0.08);
+}
+
+.location-card h2 {
+  font-size: 1.5rem;
+}
+
+.location-business-name {
+  margin: 1rem 0 0.35rem;
+  font-weight: 600;
+}
+
+.location-card address,
+.location-card__phone,
+.location-directions {
+  display: block;
+  width: fit-content;
+  margin-top: 0.75rem;
+}
+
+.location-directions span {
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+.location-care {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.location-care p {
+  margin: 0;
+}
+
+.location-service-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-top: 1.25rem;
+}
+
+.location-visit {
+  padding: clamp(1.5rem, 4vw, 3rem) 0;
+}
+
+.location-other {
+  padding: 1.25rem;
+  border-left: 3px solid var(--juniper-coral);
+  background: var(--juniper-ivory);
+}
+
+.location-other p {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .location-container {
+    width: min(100% - 2rem, 1120px);
+  }
+
+  .location-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}

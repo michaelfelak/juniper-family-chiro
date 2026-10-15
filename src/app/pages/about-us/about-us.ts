@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { StaffMember } from '../../models/site.models';
 import { MockApiService } from '../../services/mock-api.service';
 
 @Component({
   selector: 'app-about-us',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './about-us.html',
   styleUrl: './about-us.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

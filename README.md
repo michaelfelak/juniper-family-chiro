@@ -46,6 +46,15 @@ Run tests:
 npm test
 ```
 
+## SEO and location pages
+
+- Location page content, NAP, map links, page titles, and booking destinations are defined in `src/app/data/location-data.ts`.
+- Primary routes are prerendered for GitHub Pages using `prerender-routes.txt`; update that file and `public/sitemap.xml` when adding or removing a primary route.
+- Route navigation updates the page description, Open Graph URL/title, canonical link, and Organization/LocalBusiness JSON-LD.
+- Location booking links currently use the shared Jane App URL, which asks patients to choose an office. Clicks add a `booking_click` object to `window.dataLayer` with `location` and `destination_url`; configure a Google Tag Manager trigger and Ads conversion tag before expecting Google Ads reporting. A Jane appointment completion event is not currently available from this site.
+- The business confirmed the listed addresses and doctor assignments: Dr. Haven Wood in Greenville and Dr. Ashley Felak in North Augusta. Office hours are intentionally omitted. Add actual office photos after they are supplied and approved; do not infer location imagery from general brand photos.
+- GitHub Pages cannot configure Google Business Profiles, Search Console, DNS/domain redirects, or HTTPS enforcement; verify those in the respective owner accounts.
+
 ## Notes for future backend integration
 
 - Replace mock service methods with Angular `HttpClient` requests

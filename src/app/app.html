@@ -18,7 +18,7 @@
   <!-- Slide-out drawer (mobile) / Side nav (desktop) -->
   <nav class="side-nav" [class.drawer-open]="menuOpen()" aria-label="Main navigation">
     <p class="brand-name">Juniper Family Chiropractic</p>
-    <a routerLink="/welcome"         routerLinkActive="active-link" (click)="closeMenu()">Welcome</a>
+    <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
     <a routerLink="/pregnancy"       routerLinkActive="active-link" (click)="closeMenu()">Pregnancy Care</a>
     <ng-container *ngTemplateOutlet="subnav; context: { page: 'pregnancy' }" />
     <a routerLink="/pediatrics"      routerLinkActive="active-link" (click)="closeMenu()">Pediatrics</a>
@@ -27,6 +27,13 @@
     <ng-container *ngTemplateOutlet="subnav; context: { page: 'services-booking' }" />
     <a routerLink="/about-us"        routerLinkActive="active-link" (click)="closeMenu()">About Us</a>
     <ng-container *ngTemplateOutlet="subnav; context: { page: 'about-us' }" />
+    <div class="location-nav">
+      <span class="location-nav__label">Locations</span>
+      <ul class="sub-nav">
+        <li><a routerLink="/north-augusta" routerLinkActive="active-link" (click)="closeMenu()">North Augusta</a></li>
+        <li><a routerLink="/greenville" routerLinkActive="active-link" (click)="closeMenu()">Greenville</a></li>
+      </ul>
+    </div>
     <a class="book-now-nav" href="https://juniperfamilychiro.janeapp.com" (click)="closeMenu()">Book Now</a>
   </nav>
 

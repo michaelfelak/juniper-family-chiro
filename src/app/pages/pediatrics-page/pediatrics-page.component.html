@@ -17,6 +17,9 @@
             Chiropractic care supports your child’s developing nervous system, helping them better
             adapt as they grow.
           </p>
+          <p class="lead">
+            Juniper provides pediatric chiropractic care at our offices in Greenville and North Augusta, South Carolina.
+          </p>
           <div class="hero__actions">
             <a class="btn btn--ghost" [routerLink]="['/services-booking']" fragment="booking">Schedule Your Child’s Visit</a>
           </div>
@@ -239,10 +242,16 @@
     </div>
   </section>
 
-  <section class="book-band">
-    <div class="page-shell book-band__inner">
-      <h2>Ready to schedule your visit?</h2>
-      <a class="btn" [href]="bookingUrl">Book Now</a>
+  <section class="location-care-links section">
+    <div class="page-shell">
+      <p class="eyebrow">Find an office</p>
+      <h2 class="section-title">Pediatric care in Greenville and North Augusta</h2>
+      <p>Find office details and directions for pediatric chiropractic visits at either Juniper location.</p>
+      <nav aria-label="Pediatric care office locations">
+        <a routerLink="/greenville">Greenville pediatric chiropractic care</a>
+        <a routerLink="/north-augusta">North Augusta pediatric chiropractic care</a>
+      </nav>
     </div>
   </section>
+
 </main>

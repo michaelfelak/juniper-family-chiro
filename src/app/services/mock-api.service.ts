@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { delay } from 'rxjs/operators';
 import { StaffMember } from '../models/site.models';
 
 @Injectable({
@@ -29,6 +28,6 @@ export class MockApiService {
       },
     ];
 
-    return of(staff).pipe(delay(400));
+    return of(staff);
   }
 }
