@@ -1,3 +1,11 @@
 {
-  "routes": {}
+  "routes": {
+    "/": {},
+    "/about-us": {},
+    "/pediatrics": {},
+    "/pregnancy": {},
+    "/pregnancy-page": {},
+    "/services-booking": {},
+    "/welcome": {}
+  }
 }
