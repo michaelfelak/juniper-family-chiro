@@ -1,5 +1,5 @@
 import { Component, signal, HostListener, inject } from '@angular/core';
-import { NgTemplateOutlet } from '@angular/common';
+import { DOCUMENT, NgTemplateOutlet } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive, RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
@@ -41,6 +41,7 @@ const PAGE_SECTIONS: Record<string, PageSection[]> = {
   styleUrl: './app.scss',
 })
 export class App {
+  private readonly doc = inject(DOCUMENT);
   readonly menuOpen = signal(false);
   readonly currentPage = signal('');
 
@@ -51,7 +52,7 @@ export class App {
   goToSection(event: Event, id: string): void {
     event.preventDefault();
     this.closeMenu();
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.doc.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   constructor() {
@@ -67,9 +68,9 @@ export class App {
         this.currentPage.set(route.url[0]?.path ?? '');
         const fragment = route.fragment;
         if (fragment) {
-          setTimeout(() => document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+          setTimeout(() => this.doc.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
         } else {
-          document.querySelector('.page-content')?.scrollTo({ top: 0, behavior: 'instant' });
+          (this.doc.querySelector('.page-content') as HTMLElement | null)?.scrollTo?.({ top: 0, behavior: 'instant' });
         }
       });
   }
