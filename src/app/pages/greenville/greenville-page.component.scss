@@ -1,0 +1,87 @@
+.page-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.letter {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  color: var(--juniper-charcoal);
+  background: var(--juniper-white);
+  border: 1px solid var(--juniper-line);
+  border-radius: 4px;
+}
+
+h1,
+h2 {
+  font-family: 'Lora', Georgia, serif;
+  color: var(--juniper-deep-teal);
+}
+
+h1 {
+  margin: 0 0 2rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.25;
+}
+
+h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  line-height: 1.35;
+}
+
+p {
+  margin: 0 0 1rem;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+a {
+  color: var(--juniper-deep-teal);
+  text-underline-offset: 0.15em;
+  overflow-wrap: anywhere;
+}
+
+.provider-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.8rem 1rem;
+    background: var(--juniper-ivory);
+    border-left: 3px solid var(--juniper-coral);
+    line-height: 1.6;
+  }
+
+  strong {
+    color: var(--juniper-deep-teal);
+  }
+}
+
+.download-link {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  color: var(--juniper-white);
+  background: var(--juniper-deep-teal);
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--juniper-teal);
+    text-decoration: underline;
+  }
+}
+
+.signature {
+  margin-top: 1.5rem;
+}
